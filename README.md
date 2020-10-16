@@ -8,7 +8,7 @@ This repository is copied from the [rtc-coords](https://github.com/xeokit/xeokit
 It's only for evaluating the loading and navigation of full-precision models. Some other xeokit features, such as 
 Annotation occlusion and section planes, are still being adapted to full-precision, but are close.
 
-# What this solves
+# What this Solves
 
 WebGL (and most GPUs) only support geometry precision to ~7 numeric places. 
 
