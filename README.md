@@ -3,14 +3,21 @@
 [![npm version](https://badge.fury.io/js/%40xeokit%2Fxeokit-fullprecision-alpha.svg)](https://badge.fury.io/js/%40xeokit%2Fxeokit-fullprecision-alpha)
 
 This [xeokit-fullprecision-alpha](https://github.com/xeokit/xeokit-fullprecision-alpha) repository is for early evaluation 
-of xeokit's upcoming XKT V6 file format, which supports full-precision geometry. 
+of xeokit's new XKT V6 file format, which supports full-precision geometry.  
 
 This repository is copied from the [rtc-coords](https://github.com/xeokit/xeokit-sdk/tree/rtc-coords) branch of xeokit v1.4.3.
 
-It's only for evaluating the loading and navigation of full-precision models. Some other xeokit features, such as 
+This repo is only for evaluating the loading, rendering and navigation of full-precision models. Some other xeokit features, such as 
 Annotation occlusion and section planes, are still being adapted to full-precision, but are close.
 
-# What this Solves
+Use the latest version of the [xeokit-gltf-to-xkt](https://github.com/xeokit/xeokit-gltf-to-xkt) tool to convert your glTF 
+models to XKT V6, and be sure to use the tool's new ````-f```` option to select XKT V6 as output, eg:
+
+````bash
+$ gltf2xkt -f 6 -s scene.gltf -o scene.xkt
+````
+
+## What this Solves
 
 WebGL (and most GPUs) only support geometry precision to ~7 numeric places. 
 
@@ -28,7 +35,7 @@ And the same model loaded from ````XKT V6```` into this repo:
 ![Peek-2019-10-22-10-57](https://xeokit.github.io/xeokit-fullprecision-alpha/images/no_jitter.gif)
   
 
-# Quick demo
+## Quick Demo
 
 BIMData have generously provided us with an IFC model (see: What this Solves) that is positioned far from the origin, resulting in 
 geometry that has very large coordinate values, which therefore rely on full-precision in order to render without rounding 
@@ -50,7 +57,7 @@ These features are currently working with full-precison geometry:-
 * Camera interaction
 * Picking
 
-### What doesn't work yet
+### What Doesn't Work Yet
 
 These features are not yet working with full-precision geometry (but do work OK with single-precision):
 
