@@ -1,6 +1,7 @@
 # xeokit-fullprecision-alpha
 
-This repository is for early evaluation of xeokit's upcoming XKT V6 file format, which supports full-precision geometry. 
+This [xeokit-fullprecision-alpha](https://github.com/xeokit/xeokit-fullprecision-alpha) repository is for early evaluation 
+of xeokit's upcoming XKT V6 file format, which supports full-precision geometry. 
 
 This repo is copied from the [rtc-coords](https://github.com/xeokit/xeokit-sdk/tree/rtc-coords) branch of xeokit v1.4.3.
 
