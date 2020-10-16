@@ -74,7 +74,7 @@ directory into your project's ````node_modules/@xeokit/xeokit-sdk```` directory 
 Download V0.0.4+ of [xeokit-gltf-to-xkt](https://github.com/xeokit/xeokit-gltf-to-xkt) and integrate that into your 
 data pipeline.  
  
-Run your conversion pipeline on a ````gltf2xkt```` that relies on full-precision geometry. Such models are those that are either 
+Run your conversion pipeline on a model that relies on full-precision geometry. Such models are those that are either 
 positioned far from the World origin, or are just geographically large, with fine details. 
 
 Be sure to run ````gltf2xkt```` with ````XKT V6```` selected as output using the tool's new ````-f```` option, eg:
