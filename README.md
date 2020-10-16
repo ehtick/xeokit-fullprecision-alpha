@@ -7,6 +7,36 @@ This repo is copied from the [rtc-coords](https://github.com/xeokit/xeokit-sdk/t
 It's only for evaluating the loading and navigation of full-precision models. Some other xeokit features, such as 
 Annotation occlusion and section planes, are still being adapted to full-precision, but are close.
 
+# What this solves
+
+WebGL (and most GPUs) only support geometry precision to ~7 numeric places. 
+
+If an IFC model is positioned far from the origin of the World coordinate system, or if the IFC model is geographically 
+large with fine details, then WebGL will exhibit rounding errors (called "jittering") when rendering it. 
+
+This is a problem for **every browser-based BIM viewer except CesiumJS**, and will soon not be a problem for xeokit. 
+
+Shown below is an example of jitter in a model loaded from ````XKT V3````:
+
+![Peek-2019-10-22-10-57](https://xeokit.github.io/xeokit-fullprecision-alpha/jitter.gif)
+
+And the same model loaded from ````XKT V6```` into this repo:
+
+![Peek-2019-10-22-10-57](https://xeokit.github.io/xeokit-fullprecision-alpha/no_jitter.gif)
+  
+
+# Quick demo
+
+BIMData have generously provided us with an IFC model (see previous section) that is positioned far from the origin, resulting in 
+geometry that has very large coordinate values, which therefore rely on full-precision in order to render without rounding 
+jitter. 
+
+I converted that model to ````XKT V6```` and am loading it with this example: [examples/loading_XKT_preciseCoordinates.html](https://xeokit.github.io/xeokit-fullprecision-alpha/examples/loading_XKT_preciseCoordinates.html).
+
+While BIMData could have used certain  ````IfcConvert```` options (eg ````--center-model````) to center the model's coordinates and make them require lower-precision 
+(see [the tutorial](https://github.com/xeokit/xeokit-sdk/wiki/Creating-Files-for-Offline-BIM#4-dealing-with-precision-loss)), 
+ they (and many users) need such models in their original coordinates so that they can be loaded and aligned alongside other 
+models from the same project or building site.   
 
 ### What Works
 
@@ -58,9 +88,3 @@ now quite stable.
 
 Note that you could also just replace an XKT model (and its metadata) in one of the examples in this repository.
  
-
-## A pre-prepared example
-
-This repo contains a ready-to-run example of ````XKTLoaderPlugin```` loading an ````XKT V6```` model that I 
-converted earlier. For a super quick demo, just run this 
-example: [examples/loading_XKT_preciseCoordinates.html](https://xeokit.github.io/xeokit-fullprecision-alpha/examples/loading_XKT_preciseCoordinates.html).
