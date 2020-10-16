@@ -19,11 +19,11 @@ This is a problem for **every browser-based BIM viewer except CesiumJS**, and wi
 
 Shown below is an example of jitter in a model loaded from ````XKT V3````:
 
-![Peek-2019-10-22-10-57](https://xeokit.github.io/xeokit-fullprecision-alpha/jitter.gif)
+![Peek-2019-10-22-10-57](https://xeokit.github.io/xeokit-fullprecision-alpha/images/jitter.gif)
 
 And the same model loaded from ````XKT V6```` into this repo:
 
-![Peek-2019-10-22-10-57](https://xeokit.github.io/xeokit-fullprecision-alpha/no_jitter.gif)
+![Peek-2019-10-22-10-57](https://xeokit.github.io/xeokit-fullprecision-alpha/images/no_jitter.gif)
   
 
 # Quick demo
