@@ -7,6 +7,7 @@ This repo is copied from the [rtc-coords](https://github.com/xeokit/xeokit-sdk/t
 It's only for evaluating the loading and navigation of full-precision models. Some other xeokit features, such as 
 Annotation occlusion and section planes, are still being adapted to full-precision, but are close.
 
+
 ### What Works
 
 These features are currently working with full-precison geometry:-
@@ -62,4 +63,4 @@ Note that you could also just replace an XKT model (and its metadata) in one of 
 
 This repo contains a ready-to-run example of ````XKTLoaderPlugin```` loading an ````XKT V6```` model that I 
 converted earlier. For a super quick demo, just run this 
-example locally: [examples/loading_XKT_preciseCoordinates.html](https://github.com/xeokit/xeokit-sdk/blob/rtc-coords/examples/loading_XKT_preciseCoordinates.html).
+example: [examples/loading_XKT_preciseCoordinates.html](https://xeokit.github.io/xeokit-fullprecision-alpha/examples/loading_XKT_preciseCoordinates.html).
