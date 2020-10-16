@@ -1,0 +1,27 @@
+{
+  "name": "@xeokit/xeokit-fullprecision-alpha",
+  "version": "0.0.1",
+  "description": "A temporary alpha version of xeokit 1.4.4 that support full-precison geometry. Annotation occlusion, measurements and section planes do not support fll-precision in this version.",
+  "main": "index.js",
+  "scripts": {
+    "docs": "./node_modules/.bin/esdoc",
+    "publish": "npm publish --access public",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xeokit/xeokit-fullprecision-alpha.git"
+  },
+  "author": "xeolabs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xeokit/xeokit-fullprecision-alpha/issues"
+  },
+  "homepage": "https://github.com/xeokit/xeokit-fullprecision-alpha#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^5.16.0"
+  }
+}
