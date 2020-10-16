@@ -1,5 +1,7 @@
 # xeokit-fullprecision-alpha
 
+[![npm version](https://badge.fury.io/js/%40xeokit%2Fxeokit-fullprecision-alpha.svg)](https://badge.fury.io/js/%40xeokit%2Fxeokit-fullprecision-alpha)
+
 This [xeokit-fullprecision-alpha](https://github.com/xeokit/xeokit-fullprecision-alpha) repository is for early evaluation 
 of xeokit's upcoming XKT V6 file format, which supports full-precision geometry. 
 
@@ -28,7 +30,7 @@ And the same model loaded from ````XKT V6```` into this repo:
 
 # Quick demo
 
-BIMData have generously provided us with an IFC model (see previous section) that is positioned far from the origin, resulting in 
+BIMData have generously provided us with an IFC model (see: What this Solves) that is positioned far from the origin, resulting in 
 geometry that has very large coordinate values, which therefore rely on full-precision in order to render without rounding 
 jitter. 
 
@@ -64,7 +66,7 @@ To evaluate XKT V6 within your application, do the following steps:
 
 ### 1. Temporarily substitute your xeokit with this repository
 
-Temporarily substitute this xeokit version in your project. easiest way is probably just to copy the ````src```` 
+Temporarily substitute this xeokit version in your project. Easiest way is probably just to copy the ````src```` 
 directory into your project's ````node_modules/@xeokit/xeokit-sdk```` directory and then rebuild your binaries.
 
 ### 2. Use the latest version of xeokit-gltf-to-xkt to generate XKT V6 files
